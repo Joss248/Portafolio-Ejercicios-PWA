@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskGo</title>
+
+    <link rel="manifest" href="manifest.json">
+    
+    <meta name="theme-color" content="#4f46e5">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>TaskGo ✓</h1>
+            <p>Organiza tus actividades fácilmente</p>
+        </header>
+
+        <section class="nueva-tarea">
+            <input
+                type="text"
+                id="tareaInput"
+                placeholder="Escribe una tarea..."
+            >
+
+            <button id="agregarBtn">Agregar</button>
+        </section>
+
+        <section class="lista-container">
+            <h2>Mis tareas</h2>
+
+            <ul id="listaTareas">
+                
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
