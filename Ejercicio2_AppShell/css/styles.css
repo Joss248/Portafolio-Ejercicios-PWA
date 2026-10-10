@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #1976d2;
+    color: white;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+/* NAVEGACIÓN */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: #125ea8;
+    padding: 15px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÓN MÓVIL */
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+
+.main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.main-content section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    margin-bottom: 10px;
+}
+
+/* DISEÑO RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .main-content {
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+}

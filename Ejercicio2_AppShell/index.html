@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi PWA - App Shell</title>
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#1976d2">
+
+    <link rel="icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <h1>Mi Aplicación</h1>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+        </div>
+
+        <nav class="navigation" id="navigation">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#acerca">Acerca de</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section id="inicio">
+            <h2>Bienvenido</h2>
+            <p>
+                Esta aplicación utiliza un diseño App Shell
+                adaptable a diferentes tamaños de pantalla.
+            </p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>
+                Aquí se mostrará el contenido principal de la aplicación.
+            </p>
+        </section>
+
+        <section id="acerca">
+            <h2>Acerca de</h2>
+            <p>
+                Aplicación desarrollada como ejercicio de Progressive Web Apps.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
