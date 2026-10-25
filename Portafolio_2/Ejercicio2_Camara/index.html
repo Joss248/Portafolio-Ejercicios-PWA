@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhotoCapture | Cámara Web</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ENCABEZADO -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">📷</div>
+
+                <div>
+                    <h1>PhotoCapture</h1>
+                    <p>Captura de fotografías en tiempo real</p>
+                </div>
+
+            </div>
+
+            <span class="header-badge">MEDIA API</span>
+
+        </header>
+
+        <main class="main-content">
+
+            <!-- PRESENTACIÓN -->
+
+            <section class="welcome">
+
+                <span class="section-label">MEDIA DEVICES API</span>
+
+                <h2>Captura tus mejores momentos</h2>
+
+                <p>
+                    Activa la cámara de tu dispositivo, visualiza
+                    la transmisión en tiempo real y captura
+                    fotografías directamente desde tu navegador.
+                </p>
+
+            </section>
+
+            <!-- CÁMARA -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🎥</div>
+
+                    <div>
+                        <h3>Vista de la cámara</h3>
+                        <p>Transmisión de video en tiempo real</p>
+                    </div>
+
+                </div>
+
+                <div class="camera-container">
+
+                    <video
+                        id="video"
+                        autoplay
+                        playsinline
+                        muted>
+                    </video>
+
+                    <div class="camera-label">
+                        ● VISTA EN DIRECTO
+                    </div>
+
+                </div>
+
+                <div class="camera-controls">
+
+                    <button
+                        id="btnIniciar"
+                        class="btn btn-primary">
+
+                        ▶ Activar cámara
+
+                    </button>
+
+                    <button
+                        id="btnCapturar"
+                        class="btn btn-capture"
+                        disabled>
+
+                        📸 Capturar fotografía
+
+                    </button>
+
+                    <button
+                        id="btnDetener"
+                        class="btn btn-danger"
+                        disabled>
+
+                        ■ Detener cámara
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- FOTOGRAFÍA -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🖼️</div>
+
+                    <div>
+                        <h3>Fotografía capturada</h3>
+                        <p>Vista previa de tu última fotografía</p>
+                    </div>
+
+                </div>
+
+                <div class="photo-container">
+
+                    <canvas id="canvas"></canvas>
+
+                </div>
+
+                <p id="mensajeFoto" class="photo-message">
+                    Todavía no se ha capturado ninguna fotografía.
+                </p>
+
+                <button
+                    id="btnDescargar"
+                    class="btn btn-primary download-btn"
+                    disabled>
+
+                    ↓ Descargar fotografía
+
+                </button>
+
+            </section>
+
+            <!-- ESTADO DEL SISTEMA -->
+
+            <section class="info-card">
+
+                <div class="info-icon">ℹ️</div>
+
+                <div>
+
+                    <h3>Estado del sistema</h3>
+
+                    <p id="estado">
+                        Cámara desactivada.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+            <p>
+                Portafolio PWA · Ejercicio 2 · Media Devices API
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
