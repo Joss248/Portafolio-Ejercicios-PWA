@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NotifyCenter | Notificaciones PWA</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ENCABEZADO -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">🔔</div>
+
+                <div>
+                    <h1>NotifyCenter</h1>
+                    <p>Centro de notificaciones</p>
+                </div>
+
+            </div>
+
+            <span class="header-badge">NOTIFICATIONS API</span>
+
+        </header>
+
+        <main class="main-content">
+
+            <!-- PRESENTACIÓN -->
+
+            <section class="welcome">
+
+                <span class="section-label">
+                    NOTIFICATIONS & SERVICE WORKER
+                </span>
+
+                <h2>Mantente siempre informado</h2>
+
+                <p>
+                    Administra los permisos de notificación de tu
+                    navegador y envía mensajes personalizados
+                    mediante un Service Worker.
+                </p>
+
+            </section>
+
+            <!-- PERMISOS -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🔐</div>
+
+                    <div>
+                        <h3>Permisos de notificación</h3>
+                        <p>Controla el acceso a las notificaciones del dispositivo</p>
+                    </div>
+
+                </div>
+
+                <div class="permission-status">
+
+                    <div class="permission-indicator">🔔</div>
+
+                    <div>
+                        <span class="status-label">ESTADO ACTUAL</span>
+
+                        <p id="estadoPermiso">
+                            Comprobando permisos...
+                        </p>
+                    </div>
+
+                </div>
+
+                <button
+                    id="btnPermiso"
+                    class="btn btn-secondary">
+
+                    🔐 Solicitar permiso
+
+                </button>
+
+            </section>
+
+            <!-- CREAR NOTIFICACIÓN -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">✉️</div>
+
+                    <div>
+                        <h3>Crear notificación</h3>
+                        <p>Personaliza el mensaje que deseas enviar</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="titulo">
+                        Título de la notificación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Escribe un título"
+                        value="Notificación de TaskGo"
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contenido">
+                        Contenido del mensaje
+                    </label>
+
+                    <textarea
+                        id="contenido"
+                        rows="5"
+                        placeholder="Escribe el mensaje de la notificación"
+                    >¡Hola! Esta es una notificación local enviada desde un Service Worker.</textarea>
+
+                </div>
+
+                <div class="notification-preview">
+
+                    <div class="preview-icon">🔔</div>
+
+                    <div>
+                        <span class="preview-label">
+                            VISTA PREVIA
+                        </span>
+
+                        <h4>Notificación personalizada</h4>
+
+                        <p>
+                            Tu mensaje aparecerá como una
+                            notificación del sistema.
+                        </p>
+                    </div>
+
+                </div>
+
+                <button
+                    id="btnNotificar"
+                    class="btn btn-primary"
+                    disabled>
+
+                    🔔 Mostrar notificación
+
+                </button>
+
+            </section>
+
+            <!-- INFORMACIÓN DEL SISTEMA -->
+
+            <section class="info-card">
+
+                <div class="info-icon">ℹ️</div>
+
+                <div>
+
+                    <h3>Estado del sistema</h3>
+
+                    <p id="estado">
+                        Inicializando Service Worker...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+            <p>
+                Portafolio PWA · Ejercicio 3 · Notifications API
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
