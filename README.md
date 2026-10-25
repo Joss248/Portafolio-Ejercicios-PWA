@@ -1,72 +1,113 @@
-# Portafolio de Ejercicios — Aplicaciones Web Progresivas (PWA)
+# Portafolio de Ejercicios PWA
 
-## Descripción del proyecto
+Este repositorio contiene una colección de ejercicios prácticos relacionados con el desarrollo de Aplicaciones Web Progresivas (PWA), realizados con el propósito de comprender e implementar diferentes tecnologías y funcionalidades de las aplicaciones web modernas.
 
-El presente repositorio contiene un portafolio de cinco ejercicios prácticos orientados al desarrollo de la infraestructura técnica de una Aplicación Web Progresiva (Progressive Web Application, PWA).
-
-Su propósito es aplicar los principios de instalabilidad, diseño responsivo, arquitectura App Shell, administración del ciclo de vida del Service Worker y estrategias de almacenamiento en caché para permitir el funcionamiento de aplicaciones web en condiciones de conectividad limitada.
-
-## Objetivo general
-
-Desarrollar y comprobar los componentes fundamentales de una Aplicación Web Progresiva mediante la implementación de un manifiesto web, una interfaz responsiva, un Service Worker y mecanismos de almacenamiento que permitan mejorar la disponibilidad de los recursos y ofrecer una experiencia de navegación sin conexión.
+Los ejercicios están organizados en dos portafolios, cada uno enfocado en diferentes aspectos del desarrollo web.
 
 ## Tecnologías utilizadas
 
-- HTML5: estructura y contenido de las interfaces.
-- CSS3: diseño visual y adaptación responsiva.
-- JavaScript: comportamiento dinámico e interacción.
-- Web App Manifest: configuración de instalabilidad.
-- Service Worker API: interceptación de peticiones y administración del ciclo de vida.
-- Cache API: almacenamiento y recuperación de recursos.
-- IndexedDB: persistencia local de información.
-- Chrome DevTools: inspección, depuración y pruebas.
-- Git y GitHub: control de versiones y publicación del portafolio.
+- HTML5
+- CSS3
+- JavaScript
+- Progressive Web Apps (PWA)
+- Service Workers
+- Web APIs
+- IndexedDB
+- Git y GitHub
 
-## Descripción de los ejercicios
+---
 
-### Ejercicio 1. Web App Manifest y Metadatos de Instalación
+## Portafolio 1: Fundamentos de las PWA
 
-Configuración del archivo `manifest.json` con los metadatos necesarios para la instalación de una PWA. Incluye la definición del nombre de la aplicación, URL de inicio, modo de visualización, colores e iconos PNG en las resoluciones requeridas.
+Este portafolio está enfocado en los componentes fundamentales de una Aplicación Web Progresiva, incluyendo su instalación, estructura, funcionamiento sin conexión y estrategias de almacenamiento en caché.
 
-### Ejercicio 2. Maquetado del App Shell y Splash Screen Nativa
+### Ejercicio 1. Web App Manifest — TaskGo
 
-Desarrollo de una interfaz base responsiva mediante una estructura de encabezado, menú de navegación y contenedor principal. Incluye la configuración necesaria para la experiencia de instalación y la revisión del comportamiento de la aplicación mediante las herramientas del navegador.
+Implementación de un archivo Web App Manifest para configurar la identidad de una aplicación web, incluyendo su nombre, iconos y opciones de visualización, permitiendo su instalación como PWA.
 
-### Ejercicio 3. Registro y Ciclo de Vida del Service Worker
+### Ejercicio 2. App Shell
 
-Implementación del registro asíncrono del Service Worker y de los eventos `install`, `activate` y `fetch`. Se estudia el funcionamiento del ciclo de vida del trabajador de servicio y su participación en el procesamiento de solicitudes.
+Desarrollo de una estructura visual responsiva mediante el modelo App Shell, separando los elementos principales de la interfaz del contenido dinámico de la aplicación.
 
-### Ejercicio 4. Cache API y Estrategia Cache-First
+### Ejercicio 3. Service Worker
 
-Implementación de una estrategia de almacenamiento Cache-First, mediante la cual los recursos estáticos de la aplicación se recuperan prioritariamente desde la memoria caché antes de realizar una solicitud a la red.
+Implementación de un Service Worker para comprender su registro, instalación, activación y funcionamiento dentro de una aplicación web.
 
-Se comprueba la disponibilidad del App Shell en condiciones de desconexión.
+### Ejercicio 4. Estrategia Cache-First
 
-### Ejercicio 5. Interceptor de Peticiones y Manejo de Estado Offline
+Aplicación de la estrategia Cache-First para almacenar recursos y recuperarlos desde la caché, reduciendo la dependencia de la conexión a Internet.
 
-Implementación de un mecanismo de respuesta alternativa para solicitudes de navegación que no pueden completarse debido a la falta de conexión.
+### Ejercicio 5. Offline Fallback
 
-Se incorpora una página HTML personalizada denominada `offline.html`, almacenada previamente en caché, que informa al usuario cuando el recurso solicitado no se encuentra disponible.
+Implementación de una página alternativa que se muestra cuando el usuario intenta acceder a un recurso sin disponer de conexión a Internet.
+
+---
+
+## Portafolio 2: Web APIs, permisos y persistencia de datos
+
+Este segundo portafolio se enfoca en el uso de APIs del navegador, la administración de permisos y el almacenamiento de información para mejorar las capacidades de las aplicaciones web.
+
+### Ejercicio 1. GeoLocation — Geolocalización
+
+Aplicación que utiliza la Geolocation API para obtener la ubicación actual del usuario, consultar los permisos del navegador y mostrar las coordenadas geográficas y su precisión.
+
+### Ejercicio 2. PhotoCapture — Cámara web
+
+Aplicación que utiliza la MediaDevices API para acceder a la cámara del dispositivo, visualizar video en tiempo real, capturar fotografías y descargarlas en formato PNG.
+
+### Ejercicio 3. NotifyCenter — Notificaciones locales
+
+Aplicación que utiliza la Notifications API y un Service Worker para solicitar permisos y mostrar notificaciones personalizadas del sistema.
+
+### Ejercicio 4. NoteSpace — Persistencia con IndexedDB
+
+Gestor de notas que permite crear, consultar y eliminar información almacenada localmente mediante IndexedDB. Incorpora un Service Worker para permitir su funcionamiento sin conexión a Internet.
+
+### Ejercicio 5. SyncBoard — Caché dinámica
+
+Aplicación que consulta publicaciones desde una API REST y almacena las respuestas en IndexedDB. Utiliza una estrategia Network-First para obtener información actualizada cuando existe conexión y recuperar los datos almacenados cuando la red no está disponible.
+
+---
+
+## Organización del repositorio
+
+```text
+Portafolio-Ejercicios-PWA/
+│
+├── Ejercicio1_Manifest TaskGo/
+├── Ejercicio2_AppShell/
+├── Ejercicio3_ServiceWorker/
+├── Ejercicio4_CacheFirst/
+├── Ejercicio5_OfflineFallback/
+│
+├── Portafolio_2/
+│   ├── Ejercicio1_Geolocalizacion/
+│   ├── Ejercicio2_Camara/
+│   ├── Ejercicio3_Notificaciones/
+│   ├── Ejercicio4_IndexedDB/
+│   └── Ejercicio5_CacheDinamica/
+│
+└── README.md
+```
 
 ## Ejecución de los ejercicios
 
 1. Clonar o descargar el repositorio.
-2. Abrir la carpeta del ejercicio correspondiente en Visual Studio Code.
-3. Ejecutar el proyecto mediante Live Server o un servidor HTTP local.
-4. Abrir la aplicación en Google Chrome.
-5. Utilizar Chrome DevTools para inspeccionar el manifiesto, el Service Worker y el almacenamiento en caché.
-6. Para comprobar el funcionamiento sin conexión, activar el modo Offline desde la pestaña Network y recargar la aplicación.
+2. Abrir la carpeta del proyecto en Visual Studio Code.
+3. Seleccionar el ejercicio que se desea ejecutar.
+4. Abrir su archivo `index.html` mediante Live Server.
+5. Utilizar las herramientas de desarrollo del navegador para comprobar los Service Workers, permisos, almacenamiento y funcionamiento sin conexión.
 
-**Nota:** Los Service Workers requieren un contexto seguro, como HTTPS o localhost. Se recomienda ejecutar cada ejercicio de forma independiente y evitar registros de Service Workers anteriores que puedan interferir con las pruebas.
+**Nota:** algunas funcionalidades, como la geolocalización, la cámara y las notificaciones, requieren permisos del navegador y un contexto seguro, como `localhost` o HTTPS.
 
-## Resultados
+## Objetivo general
 
-El desarrollo de los ejercicios permitió implementar los elementos fundamentales de una PWA, comprender el ciclo de vida del Service Worker y comprobar el funcionamiento de estrategias de almacenamiento local.
+Aplicar los conocimientos adquiridos sobre el desarrollo de Aplicaciones Web Progresivas mediante ejercicios prácticos que permitan comprender el uso de recursos web, estrategias de caché, APIs del navegador y mecanismos de persistencia de datos.
 
-Asimismo, se implementó una respuesta alternativa personalizada para mejorar la experiencia del usuario cuando no existe conectividad.
+## Autor
 
-## Conclusión
+**José Antonio Hernández Cruz**
 
-La realización del portafolio permitió fortalecer los conocimientos relacionados con el desarrollo de Aplicaciones Web Progresivas, particularmente en la configuración de sus componentes principales y en la administración de recursos mediante Service Workers y Cache API.
+Universidad Tecnológica de Gutiérrez Zamora
 
-Las pruebas realizadas demuestran la importancia del almacenamiento local para mantener la disponibilidad de una aplicación y proporcionar una experiencia de usuario más confiable ante problemas de conectividad.
+Ingeniería en Desarrollo y Gestión de Software
