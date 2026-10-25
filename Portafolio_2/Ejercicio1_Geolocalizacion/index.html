@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GeoLocation | Panel de ubicación</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ENCABEZADO -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">📍</div>
+
+                <div>
+                    <h1>GeoLocation</h1>
+                    <p>Panel de geolocalización</p>
+                </div>
+
+            </div>
+
+            <span class="header-badge">WEB API</span>
+
+        </header>
+
+        <main class="main-content">
+
+            <!-- PRESENTACIÓN -->
+
+            <section class="welcome">
+
+                <span class="section-label">GEOLOCATION API</span>
+
+                <h2>Descubre tu ubicación actual</h2>
+
+                <p>
+                    Consulta los permisos de ubicación de tu navegador
+                    y obtén tus coordenadas geográficas en tiempo real.
+                </p>
+
+            </section>
+
+            <!-- PERMISOS -->
+
+            <section class="card permission-card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🔐</div>
+
+                    <div>
+                        <h3>Permisos de ubicación</h3>
+                        <p>Consulta el estado de acceso a tu ubicación</p>
+                    </div>
+
+                </div>
+
+                <div class="permission-status">
+
+                    <span class="status-dot"></span>
+
+                    <p id="estadoPermiso">
+                        Consultando permisos...
+                    </p>
+
+                </div>
+
+                <button id="btnPermiso" class="btn btn-secondary">
+                    ↻ Consultar permiso
+                </button>
+
+            </section>
+
+            <!-- COORDENADAS -->
+
+            <section class="card location-card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🌎</div>
+
+                    <div>
+                        <h3>Ubicación actual</h3>
+                        <p>Coordenadas obtenidas desde tu dispositivo</p>
+                    </div>
+
+                </div>
+
+                <div class="coordinates-grid">
+
+                    <div class="coordinate-box">
+
+                        <span class="coordinate-label">
+                            LATITUD
+                        </span>
+
+                        <span class="coordinate-icon">↕</span>
+
+                        <p id="latitud">--</p>
+
+                    </div>
+
+                    <div class="coordinate-box">
+
+                        <span class="coordinate-label">
+                            LONGITUD
+                        </span>
+
+                        <span class="coordinate-icon">↔</span>
+
+                        <p id="longitud">--</p>
+
+                    </div>
+
+                    <div class="coordinate-box precision-box">
+
+                        <span class="coordinate-label">
+                            PRECISIÓN
+                        </span>
+
+                        <span class="coordinate-icon">◎</span>
+
+                        <p id="precision">--</p>
+
+                    </div>
+
+                </div>
+
+                <button id="btnUbicacion" class="btn btn-primary">
+                    📍 Obtener mi ubicación
+                </button>
+
+            </section>
+
+            <!-- INFORMACIÓN DEL SISTEMA -->
+
+            <section class="info-card">
+
+                <div class="info-icon">ℹ️</div>
+
+                <div>
+                    <h3>Estado del sistema</h3>
+
+                    <p id="mensaje">
+                        Esperando una solicitud de ubicación.
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+            <p>
+                Portafolio PWA · Ejercicio 1 · Geolocation API
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
