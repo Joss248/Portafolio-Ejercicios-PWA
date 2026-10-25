@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NoteSpace | Gestor de notas</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ENCABEZADO -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">📝</div>
+
+                <div>
+                    <h1>NoteSpace</h1>
+                    <p>Tu espacio personal de notas</p>
+                </div>
+
+            </div>
+
+            <span class="header-badge">INDEXEDDB API</span>
+
+        </header>
+
+        <main class="main-content">
+
+            <!-- PRESENTACIÓN -->
+
+            <section class="welcome">
+
+                <span class="section-label">
+                    LOCAL DATA STORAGE
+                </span>
+
+                <h2>Organiza tus ideas en un solo lugar</h2>
+
+                <p>
+                    Crea y administra tus notas personales.
+                    Toda tu información se almacena directamente
+                    en tu navegador y permanece disponible
+                    incluso sin conexión a Internet.
+                </p>
+
+            </section>
+
+            <!-- FORMULARIO -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">✏️</div>
+
+                    <div>
+                        <h3>Crear nueva nota</h3>
+                        <p>Guarda tus ideas y recordatorios importantes</p>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="titulo">
+                        Título de la nota
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Ej. Actividades pendientes"
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contenido">
+                        Contenido
+                    </label>
+
+                    <textarea
+                        id="contenido"
+                        rows="5"
+                        placeholder="Escribe aquí tus ideas..."
+                    ></textarea>
+
+                </div>
+
+                <button
+                    id="btnGuardar"
+                    class="btn btn-primary">
+
+                    ＋ Guardar nota
+
+                </button>
+
+            </section>
+
+            <!-- NOTAS GUARDADAS -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">📚</div>
+
+                    <div>
+                        <h3>Mis notas</h3>
+                        <p>Consulta y administra tus notas almacenadas</p>
+                    </div>
+
+                </div>
+
+                <div id="listaNotas" class="notes-grid">
+
+                    <p>Cargando notas...</p>
+
+                </div>
+
+            </section>
+
+            <!-- ESTADO DEL SISTEMA -->
+
+            <section class="info-card">
+
+                <div class="info-icon">💾</div>
+
+                <div>
+
+                    <h3>Almacenamiento local</h3>
+
+                    <p id="estado">
+                        Inicializando base de datos...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+            <p>
+                Portafolio PWA · Ejercicio 4 · IndexedDB API
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
