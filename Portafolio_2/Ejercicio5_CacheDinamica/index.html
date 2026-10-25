@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SyncBoard | Publicaciones PWA</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ENCABEZADO -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="logo">🌐</div>
+
+                <div>
+                    <h1>SyncBoard</h1>
+                    <p>Panel de sincronización de datos</p>
+                </div>
+
+            </div>
+
+            <span class="header-badge">NETWORK-FIRST</span>
+
+        </header>
+
+        <main class="main-content">
+
+            <!-- PRESENTACIÓN -->
+
+            <section class="welcome">
+
+                <span class="section-label">
+                    REST API & OFFLINE STORAGE
+                </span>
+
+                <h2>Información siempre disponible</h2>
+
+                <p>
+                    Consulta publicaciones desde una API REST
+                    y mantén disponible la última información
+                    almacenada, incluso cuando pierdas
+                    tu conexión a Internet.
+                </p>
+
+            </section>
+
+            <!-- SINCRONIZACIÓN -->
+
+            <section class="card sync-card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">🔄</div>
+
+                    <div>
+                        <h3>Centro de sincronización</h3>
+                        <p>Consulta el estado de tus datos</p>
+                    </div>
+
+                </div>
+
+                <div class="sync-status">
+
+                    <div class="sync-indicator">🌐</div>
+
+                    <div>
+
+                        <span class="status-label">
+                            ESTADO DE LA INFORMACIÓN
+                        </span>
+
+                        <p id="estado">
+                            Inicializando aplicación...
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="update-info">
+
+                    <div class="update-icon">🕒</div>
+
+                    <p id="ultimaActualizacion">
+                        Última actualización: --
+                    </p>
+
+                </div>
+
+                <button
+                    id="btnActualizar"
+                    class="btn btn-primary">
+
+                    ↻ Actualizar publicaciones
+
+                </button>
+
+            </section>
+
+            <!-- PUBLICACIONES -->
+
+            <section class="card">
+
+                <div class="card-heading">
+
+                    <div class="card-icon">📰</div>
+
+                    <div>
+                        <h3>Publicaciones disponibles</h3>
+                        <p>Información obtenida desde la API REST</p>
+                    </div>
+
+                </div>
+
+                <div id="listaPublicaciones" class="posts-grid">
+
+                    <p>Cargando información...</p>
+
+                </div>
+
+            </section>
+
+            <!-- INFORMACIÓN -->
+
+            <section class="info-card">
+
+                <div class="info-icon">💾</div>
+
+                <div>
+
+                    <h3>Almacenamiento inteligente</h3>
+
+                    <p>
+                        SyncBoard utiliza una estrategia Network-First.
+                        Primero intenta obtener datos actualizados
+                        desde Internet y, si la conexión falla,
+                        recupera automáticamente la última
+                        respuesta almacenada en IndexedDB.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+
+        <footer>
+            <p>
+                Portafolio PWA · Ejercicio 5 · Network-First e IndexedDB
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="database.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

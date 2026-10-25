@@ -1,0 +1,402 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --navy: #0f172a;
+    --background: #f1f5f9;
+    --white: #ffffff;
+    --text: #334155;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+.header {
+    background: var(--navy);
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.header h1 {
+    font-size: 23px;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.header-badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #93c5fd;
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.main-content {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 45px 25px;
+    flex: 1;
+}
+
+/* ==========================================
+   PRESENTACIÓN
+========================================== */
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.section-label {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.welcome h2 {
+    font-size: 30px;
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.welcome p {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: #eff6ff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.card-heading h3 {
+    font-size: 19px;
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   ESTADO DE SINCRONIZACIÓN
+========================================== */
+
+.sync-status {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 24px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.sync-indicator {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.status-label {
+    display: block;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#estado {
+    color: var(--navy);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   ÚLTIMA ACTUALIZACIÓN
+========================================== */
+
+.update-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding: 16px 18px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.update-icon {
+    font-size: 20px;
+}
+
+#ultimaActualizacion {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.btn {
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+/* ==========================================
+   PUBLICACIONES
+========================================== */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.posts-grid > p {
+    grid-column: 1 / -1;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.publicacion {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    min-width: 0;
+}
+
+.publicacion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.publicacion h3 {
+    color: var(--navy);
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.publicacion p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   INFORMACIÓN
+========================================== */
+
+.info-card {
+    display: flex;
+    gap: 15px;
+    padding: 22px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    border-radius: 14px;
+}
+
+.info-icon {
+    font-size: 22px;
+}
+
+.info-card h3 {
+    font-size: 15px;
+    color: #075985;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: #0369a1;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO
+========================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 20px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .header-badge {
+        display: none;
+    }
+
+    .main-content {
+        padding: 30px 15px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sync-status {
+        padding: 15px;
+    }
+
+    .sync-indicator {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
